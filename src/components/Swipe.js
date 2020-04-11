@@ -27,11 +27,11 @@ const styles = {
     fontWeight: 'bold'
   },
   location: {
-    color: colors.brown.original,
+    color: colors.brown,
     fontSize: 24
   },
   waiting: {
-    color: colors.brown.original,
+    color: colors.brown,
     fontSize: 24
   },
   counter: {
@@ -48,14 +48,14 @@ const styles = {
   }
 };
 
-const Swipe = ({choices = [], onDone}) => {
+const Swipe = ({choices, onDone}) => {
   const [ remainingChoices, setRemainingChoices ] = useState([]);
   const [ remainingChoicesUnset, setRemainingChoicesUnset ] = useState(true);
   const [ approvedChoices, setApprovedChoices ] = useState([]);
 
   // Once choices has loaded, set it to remainingChoices. But only do this once
   useEffect(() => {
-    if (choices.length > 0 && remainingChoicesUnset) {
+    if (choices && remainingChoicesUnset) {
       setRemainingChoices(choices);
       setRemainingChoicesUnset(false);
       slideRenderer(0, 0);
@@ -109,7 +109,7 @@ const Swipe = ({choices = [], onDone}) => {
         enableMouseEvents
         slideRenderer={slideRenderer}
         onChangeIndex={handleSwipe}
-    />
+      />
     </div>
   );
 }

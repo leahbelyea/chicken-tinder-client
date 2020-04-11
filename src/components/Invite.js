@@ -10,7 +10,7 @@ const styles = {
     textAlign: 'center'
   },
   waiting: {
-    color: colors.brown.original,
+    color: colors.brown,
     fontSize: 24,
     marginTop: 60,
 
@@ -51,7 +51,7 @@ const Invite = ({roomId}) => {
   return (
     <div css={styles.container}>
       <div css={styles.waiting}>
-        <FontAwesomeIcon icon={faUtensils} color={colors.brown.original} spin />
+        <FontAwesomeIcon icon={faUtensils} color={colors.brown} spin />
         <span>Waiting for your partner</span>
       </div>
       <button css={styles.button} onClick={inviteLinkToClipboard}>

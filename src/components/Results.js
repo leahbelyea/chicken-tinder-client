@@ -14,12 +14,21 @@ const styles = {
     fontWeight: 'bold'
   },
   result: {
-    color: colors.brown.original,
+    color: colors.brown,
     fontSize: 24
   },
 };
 
-const Results = ({ matches = [] }) => {
+const Results = ({ matches }) => {
+  if (!matches) {
+    return (
+      <div css={styles.container}>
+        <p css={styles.header}>No restaurants found!</p>
+        <p css={styles.result}>Where are you guys, Stanley?</p>
+      </div>
+    );
+  }
+
   if (matches.length === 0) {
     return (
       <div css={styles.container}>

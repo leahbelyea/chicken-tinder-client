@@ -35,7 +35,7 @@ class App extends React.Component {
     }
 
     socket.on('assignedRoom', data => this.setState({ roomId: data }));
-    socket.on('fetchedChoices', data => this.setState({ choices: data, phase: 'swipe' }));
+    socket.on('fetchedChoices', data => this.setState({ choices: data || [], phase: 'swipe' }));
     socket.on('selectedMatches', data => this.setState({ selectedMatches: data, phase: 'results' }));
   }
 

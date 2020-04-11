@@ -21,7 +21,7 @@ const Header = () => {
   return (
     <header css={styles.header}>
       <div css={styles.iconWrapper}>
-        <FontAwesomeIcon icon={faDrumstickBite} color={colors.brown.original} />
+        <FontAwesomeIcon icon={faDrumstickBite} color={colors.brown} />
       </div>
       <div css={styles.iconWrapper}>
         <FontAwesomeIcon icon={faFire} color={colors.orange.original} />
