@@ -109,6 +109,7 @@ const Swipe = ({choices, onDone}) => {
         enableMouseEvents
         slideRenderer={slideRenderer}
         onChangeIndex={handleSwipe}
+        containerStyle={{width: 400}}
       />
     </div>
   );
