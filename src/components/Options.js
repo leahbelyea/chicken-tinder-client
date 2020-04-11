@@ -98,7 +98,7 @@ const styles = {
       padding: '10px 0',
       fontSize: 16,
       cursor: 'pointer',
-      margin: '0 10px',
+      margin: '0 5px',
       width: 140,
       opacity: 0.5,
       transition: 'all 0.3s ease',
