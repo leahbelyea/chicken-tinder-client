@@ -11,7 +11,8 @@ const styles = {
   container: {
     textAlign: 'center',
     color: colors.grey,
-    fontSize: 20
+    fontSize: 20,
+    padding: 40
   },
   loading: {
     display: 'inline-block',
@@ -94,12 +95,13 @@ const styles = {
       borderWidth: 2,
       borderColor: colors.grey,
       borderRadius: 6,
-      padding: '10px 20px',
-      fontSize: 20,
+      padding: '10px 0',
+      fontSize: 16,
       cursor: 'pointer',
       margin: '0 10px',
-      width: 180,
-      opacity: 0.5
+      width: 140,
+      opacity: 0.5,
+      transition: 'all 0.3s ease',
     },
     buttonSelected: {
     opacity: 1,
